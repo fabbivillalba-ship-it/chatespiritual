@@ -1,12 +1,12 @@
 // Funciones de utilidad para el sistema de acceso público
 
 export async function verificarAcceso() {
-  return { autorizado: true };
+  return { autorizado: true, userId: "usuario-publico" };
 }
 
 export async function exigirAlquimia() {
-  // Al no requerir autenticación ni Clerk, autorizamos directamente
-  return { autorizado: true };
+  // Devolvemos el userId para que las rutas que lo esperan no fallen en el build
+  return { autorizado: true, userId: "usuario-publico" };
 }
 
 export function fechaDeHoy(): string {
