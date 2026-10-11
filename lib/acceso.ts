@@ -1,7 +1,11 @@
-// Funciones de utilidad para el sistema
+// Funciones de utilidad para el sistema de acceso público
 
 export async function verificarAcceso() {
-  // Al no requerir autenticación, permitimos el acceso directo
+  return { autorizado: true };
+}
+
+export async function exigirAlquimia() {
+  // Al no requerir autenticación ni Clerk, autorizamos directamente
   return { autorizado: true };
 }
 
