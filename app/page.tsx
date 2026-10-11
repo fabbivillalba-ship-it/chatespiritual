@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState } from 'react';
-import ShareCard from '@/components/ShareCard';
 import { PricingModal } from '@/components/PricingModal';
 
 export default function Home() {
@@ -137,7 +136,7 @@ export default function Home() {
               </div>
             </div>
 
-            <ShareCard pregunta={pregunta} respuestaCorta={resumen} />
+        
 
             <button
               onClick={() => {
