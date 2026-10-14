@@ -64,13 +64,16 @@ export const PricingModal: React.FC<PricingModalProps> = ({ isOpen, onClose }) =
         setIsLoading(false);
         if (window.Paddle && window.Paddle.Checkout) {
           window.Paddle.Checkout.open({
-            items: [{ priceId: PRICE_ID, quantity: 1 }],
-            settings: {
-              displayMode: "overlay",
-              theme: "dark",
-              locale: "es",
-            },
-          });
+  items: [
+    {
+      priceId: "pri_01m4nqp5q7aa57zj7xpys4wxe8",
+      quantity: 1
+    }
+  ],
+  settings: {
+    successUrl: window.location.origin + "/?pago=exitoso"
+  }
+});
         } else {
           alert("El entorno de pago se está inicializando. Por favor, volvé a hacer clic en el botón.");
         }
